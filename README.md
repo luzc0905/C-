@@ -1,11 +1,3 @@
-笔记中的教程地址
-
-网址：
-
-[https://www.bilibili.com/medialist/detail/ml222902705?type=1]: https://www.bilibili.com/medialist/detail/ml222902705?type=1	"2020年最新C#/.Net Core零基础到精通实战教程全集(C#/Sql/SqlServer/Winform/源码/NetCore/Net Core/全栈)"
-
-
-
 # CShape基础
 
 ## 一、C#语言及其特点
@@ -17,9 +9,11 @@
 - C#是**面向对象**的编程语言
 
 
+
 ## 二、认识.NET Framework和.NET Core
 
 ### .NET是什么
+
 <img src = "CShape基础.assets/clip_image004.jpg" align="center">
 
 ### .NET和C#的关系,这是初学者最常见的问题
@@ -39,6 +33,8 @@ Mirosoft Visual Studio(简称VS)是美国微软公司的开发工具包系列产
 3. 根据自己的情况选择需要的安装模块，一般选择“ASP.NET开发”、“.NET桌面开发”、“通用Windows平台开发”、“数据库存储和处理”、“Visual Studio扩展开发”、“.NET Core跨平台开发”
 
 4. 点击安装即可开始创建第一个项目
+
+ 
 
 ## 四、C#语法基础
 
@@ -83,24 +79,23 @@ C#是一种面向对象的编程语言。在面向对象的程序设计方法中
 
 - using关键字
 
-  在任何C#程序中的第一条语句都是: `using System;`
-
-  `using`关键字用于在程序中包含命名空间。一个程序可以包含多个`using`语句。
-
+	在任何C#程序中的第一条语句都是: `using System;`
+	
+	`using`关键字用于在程序中包含命名空间。一个程序可以包含多个`using`语句。
+	
 - class关键字
 
-  class关键字用于声明一个类。
+    class关键字用于声明一个类。
 
 - C#的注释方式
 
-  1. // 单行注释
-  2. /**/ 多行注释
-  3. /// 文档注释（注释于类或方法等地方，其他地方调用的时候会提示对应注释）
-  4. 注释的作用:
+	1. // 单行注释
+	2. /**/ 多行注释
+	3. /// 文档注释（注释于类或方法等地方，其他地方调用的时候会提示对应注释）
+	4. 注释的作用:
+	  - 解释:说明代码作用
 
-    - 解释:说明代码作用
-
-    - 注销:将暂时不需要的代码注销
+	  - 注销:将暂时不需要的代码注销
 
 >铭记:
 >
@@ -115,16 +110,16 @@ C#是一种面向对象的编程语言。在面向对象的程序设计方法中
 
 - C# 中提供的基本类型大致分为以下几类：
 
-  | 类型       | 举例                   |
-  | ---------- | ---------------------- |
-  | 整数类型   | byte、short、int、long |
-  | 浮点型     | float、double          |
-  | 十进制类型 | decimal                |
-  | 布尔类型   | bool                   |
-  | 字符类型   | string、char           |
-  | 空类型     | null                   |
+    | 类型       | 举例                   |
+    | ---------- | ---------------------- |
+    | 整数类型   | byte、short、int、long |
+    | 浮点型     | float、double          |
+    | 十进制类型 | decimal                |
+    | 布尔类型   | bool                   |
+    | 字符类型   | string、char           |
+    | 空类型     | null                   |
 
-  
+    
 
 ## 五、C#语法进阶
 
@@ -134,52 +129,52 @@ C#是一种面向对象的编程语言。在面向对象的程序设计方法中
 
 - 当表达式包含多个运算符时，运算符的优先级(precedence)控制各运算符的计算顺序。例如，表达式`x + y * z`按`x + (y * z)`计算，因为`*`运算符的优先级高于`+`运算符。 
 
-- (了解)大多数运算符都可以**重载(overload)**。运算符重载允许指定用户定义的运算符实现来执行运算，这 些运算的操作数中至少有一个，甚至所有操作数都属于用户定义的类类型或结构类型。
+-   (了解)大多数运算符都可以**重载(overload)**。运算符重载允许指定用户定义的运算符实现来执行运算，这 些运算的操作数中至少有一个，甚至所有操作数都属于用户定义的类类型或结构类型。
 
 - 下表总结了C#简单常用的运算符，并按优先级从高到低的顺序列出各运算符类别。同类别中的运算符 优先级相同。
 
-| **类别**       | **表达式**       | **说明**                                          |
-| -------------- | ---------------- | ------------------------------------------------- |
-| 基本           | `x.m`            | 成员访问                                          |
-|                | `x(...)`         | 方法和委托调用                                    |
-|                | `x[...]`         | 数组和索引器访问                                  |
-|                | `newT(...)`      | 对象和委托创建                                    |
-|                | `newT(...){...}` | 使用初始值设定项创建对象                          |
-|                | `new{...}`       | 匿名对象初始值设定项                              |
-|                | `newT[...]`      | 数组创建                                          |
-| 一元           | `+x`             | 恒等                                              |
-|                | `-x`             | 求相反数                                          |
-|                | `!x`             | 逻辑求反                                          |
-|                | `~x`             | 按位求反                                          |
-|                | `++x`            | 前增量                                            |
-|                | `--x`            | 前减量                                            |
-|                | `x++`            | 后增量                                            |
-|                | `x--`            | 后减量                                            |
-|                | `(T)x`           | 将x显示转换为类型T                                |
-| 二元           | `x * y`          | 乘法                                              |
-|                | `x / y`          | 除法                                              |
-|                | `x % y`          | 取余                                              |
-|                | `x + y`          | 加法，字符串串联                                  |
-|                | `x - y`          | 减法                                              |
-|                | `x << y`         | 位左移                                            |
-|                | `x >> y`         | 位右移                                            |
-|                | `x < y`          | 小于                                              |
-|                | `x > y`          | 大于                                              |
-|                | `x <= y`         | 小于或等于                                        |
-|                | `x >= y`         | 大于或等于                                        |
-|                | `x  is T`        | 如果 x 位 T ，返回`true`，否则`false`             |
-|                | `x  as T`        | 返回转换为类型 T 的 x ,如果 x 不是 T 则返回`null` |
-|                | `x == y`         | 等于                                              |
-|                | `x != y`         | 不等于                                            |
-|                | `x & y`          | 整形按位与  ,布尔逻辑AND                          |
-|                | `x | y`          | 整形按位或  ,布尔逻辑OR                           |
-|                | `x && y`         | 且，当 x 为`true`时，才对 y 求值                  |
-|                | `x || y`         | 或，当 x 为`false`时。才对 y 求值                 |
-|                | `x ?? y`         | 如果 x 为`null`，则计算结果为 y，否则为 x         |
-| 三元           | `x ? y : z`      | 如果 x 为`true`,对 y 求值，x 为`false`，对 z 求值 |
-| 赋值或匿名函数 | `x = y`          | 赋值                                              |
-|                | `x = x + y`      | 复合赋值                                          |
-|                | `(T x) => y`     | 匿名函数（lambda表达式）                          |
+| **类别** | **表达式**      | **说明**                                |
+| -------- | --------------- | --------------------------------------- |
+| 基本      |`x.m`          | 成员访问                                |
+|          | `x(...)`          | 方法和委托调用                          |
+|          | `x[...]`          | 数组和索引器访问                        |
+|          | `newT(...)`      | 对象和委托创建                          |
+|          | `newT(...){...}` | 使用初始值设定项创建对象                |
+|          | `new{...}`       | 匿名对象初始值设定项                    |
+|          | `newT[...]`      | 数组创建                              |
+| 一元      |`+x`             | 恒等                                  |
+|          | `-x`            | 求相反数                               |
+|          | `!x`            | 逻辑求反                               |
+|          | `~x`            | 按位求反                               |
+|          | `++x`           | 前增量                                 |
+|          | `--x`           | 前减量                                 |
+|          | `x++`           | 后增量                                 |
+|          | `x--`           | 后减量                                 |
+|          | `(T)x`           | 将x显示转换为类型T                      |
+| 二元      |`x * y`            | 乘法                                 |
+|          | `x / y`            | 除法                                |
+|          | `x % y`            | 取余                                |
+|          | `x + y`            | 加法，字符串串联                      |
+|          | `x - y`            | 减法                                |
+|          | `x << y`           | 位左移                              |
+|          | `x >> y`           | 位右移                              |
+|          | `x < y`            | 小于                                |
+|          | `x > y`            | 大于                                |
+|          | `x <= y`           | 小于或等于                           |
+|          | `x >= y`           | 大于或等于                           |
+|          | `x  is T`          | 如果 x 位 T ，返回`true`，否则`false`           |
+|          | `x  as T`          | 返回转换为类型 T 的 x ,如果 x 不是 T 则返回`null`   |
+|          | `x == y`           | 等于                                 |
+|          | `x != y`           | 不等于                               |
+|          | `x & y`        | 整形按位与  ,布尔逻辑AND                     |
+|          | `x | y`        | 整形按位或  ,布尔逻辑OR                      |
+|          | `x && y`       | 且，当 x 为`true`时，才对 y 求值               |
+|          | `x || y`       | 或，当 x 为`false`时。才对 y 求值              |
+|          | `x ?? y`       | 如果 x 为`null`，则计算结果为 y，否则为 x      |
+| 三元      | `x ? y : z`      | 如果 x 为`true`,对 y 求值，x 为`false`，对 z 求值  |
+| 赋值或匿名函数 | `x = y`        | 赋值                                    |
+|              | `x = x + y`  | 复合赋值                               |
+|              | `(T x) => y`   | 匿名函数（lambda表达式）                 |
 
  
 
@@ -322,7 +317,7 @@ ints[0]  = 1
 
 #### 总结提升
 
-##### 案例一：老公买西瓜系列。
+##### 案例一：老公买西瓜系列
 
 - 超市西瓜的价格是1.9元/斤。
 
@@ -449,11 +444,11 @@ GetUsrInfo();
 4. 了解即可`params`：这个参数修饰符允许将一组可变的数量的参数作为单独的逻辑参数进行传递， 方法只能有一个`params`修饰符，而且必须是方法的最后一个参数。
 
 5. `out`和`ref`的区别
-   - `out`修饰的参数必须在方法内修改，而`ref`可以修改也可以不修改;
-
-   - `out`在传入参数的时候，参数是局部变量的话，可以不用赋值，因为`out`一定会对其进行赋值;
-
-   - 而`ref`修饰的参数，在实参必须有初始值才能调用。因为`ref`修饰的不一定会给它赋值。
+	- `out`修饰的参数必须在方法内修改，而`ref`可以修改也可以不修改;
+	
+	- `out`在传入参数的时候，参数是局部变量的话，可以不用赋值，因为`out`一定会对其进行赋值;
+	
+	- 而`ref`修饰的参数，在实参必须有初始值才能调用。因为`ref`修饰的不一定会给它赋值。
 
 ## 六、面向对象(OOP)基本概念
 
@@ -539,9 +534,9 @@ GetUsrInfo();
 
 - 类是对一群具有相同特征或者行为的事物的一个统称，是抽象的，不能直接使用
 
-  - **特征**被称为**属性**
+	- **特征**被称为**属性**
 
-  - **行为**被称为**方法**
+	- **行为**被称为**方法**
 
 - 类就相当于制汽车是的图纸，是-一个模板，是负责创建对象的
 
@@ -565,7 +560,7 @@ GetUsrInfo();
 
 - 类只有一个， 而对象可以有很多个
 
-  - 不同的对象之间属性的具体内容可能各不相同
+	- 不同的对象之间属性的具体内容可能各不相同
 
 - **类中定义了什么属性和方法，对象中就有什么属性和方法，不可能多，也不可能少**
 
@@ -895,4 +890,239 @@ foreach  (KeyValuePair<int, string> item  in dictionary) {
 	string value =  item.Value; 
 }  
 ```
+
+
+
+
+
+# 控件说明笔记
+
+
+
+## C#编程窗体控件命名的规范及要求
+
+
+
+### Data Control数据控制
+
+
+
+| 类 型             | 前 缀 | 示 例           |
+| ----------------- | ----- | --------------- |
+| AccessDataSource  | ads   | adsPubs         |
+| DataList          | dlst  | dlstTitles      |
+| DetailView        | dvw   | dvwTitles       |
+| FormView          | fvw   | fvwFonts        |
+| GridView          | gvw   | gvwCity         |
+| ObjectDataSource  | ods   | odsMenus        |
+| Repeater          | rpt   | rptQueryResults |
+| ReportViewer      | rvw   | rvwRecord       |
+| SiteMapDataSource | smds  | smdsSite        |
+| SqlDataSource     | sds   | sdsBooks        |
+| XmlDataSource     | xds   | xdsTitles       |
+
+
+
+###  Validation Control验证控制
+
+
+
+| 类 型                      | 前 缀 | 示 例          |
+| -------------------------- | ----- | -------------- |
+| CompareValidator           | valc  | valcValidAge   |
+| CustomValidator            | valx  | valxDBCheck    |
+| RangeValidator             | valg  | valgAge        |
+| RegularExpressionValidator | vale  | valeEmail      |
+| RequiredFieldValidator     | valr  | valrFirstName  |
+| ValidationSummary          | vals  | valsFormErrors |
+
+
+
+### avigation Control
+
+
+
+| 类 型       | 前 缀 | 示 例    |
+| ----------- | ----- | -------- |
+| Menu        | mnu   | mnuUser1 |
+| SiteMapPath | smp   | smpSite1 |
+| TreeView    | trvw  | trvwMenu |
+
+###  Login Control登录控件
+
+| 类 型            | 前 缀 | 示 例     |
+| ---------------- | ----- | --------- |
+| ChangePassword   | cpwd  | cpwdUser1 |
+| CreateUserWizard | cuw   | cuwLogin  |
+| Login            | log   | logCenter |
+| LoginName        | logn  | lognUser  |
+| LoginStatus      | logs  | logsUser  |
+| LoginView        | logv  | logvUser  |
+| PasswordRecovery | pwdr  | pwdrUser  |
+
+ 
+
+### WebParts ControlWeb部件控件
+
+
+
+| 类 型                  | 前 缀 | 示 例        |
+| ---------------------- | ----- | ------------ |
+| AppearanceEditorPart   | paed  | paedPart1    |
+| BehaviorEditorPart     | pbed  | pbedPart2    |
+| CatalogZone            | zca   | zcatCity     |
+| ConnectionsZone        | zcon  | zconDataBase |
+| DeclarativeCatalogPart | pdca  | pdcaPart1    |
+| EditorZone             | zed   | zedNews      |
+| ImportCatalogPart      | pica  | picaPart     |
+| LayoutEditorPart       | pled  | pledNews     |
+| PageCatalogPart        | ppca  | ppcaMail     |
+| PropertyGridEditorPart | ppge  | ppgeServer   |
+| ProxyWebPartManager    | mpwp  | mpwpWeb      |
+| WebPartManager         | mwp   | mwpSite1     |
+| WebPartZone            | zwp   | zwpSite2     |
+
+
+
+### 基本数据类型
+
+
+
+| **数据类型** | **数据类型简写** | **标准命名举例**   |
+| ------------ | ---------------- | ------------------ |
+| Array        | arr              | arrShoppingList    |
+| Boolean      | bln              | blnIsPostBack      |
+| Byte         | byt              | bytPixelValue      |
+| Char         | chr              | chrDelimiter       |
+| DateTime     | dtm              | dtmStartDate       |
+| Decimal      | dec              | decAverageHeight   |
+| Double       | dbl              | dblSizeofUniverse  |
+| Integer      | int              | intRowCounter      |
+| Long         | lng              | lngBillGatesIncome |
+| Object       | obj              | objReturnValue     |
+| Short        | shr              | shrAverage         |
+| Single       | sng              | sngMaximum         |
+| String       | str              | strFirstName       |
+
+
+
+### ADO.NET 命名规范
+
+
+
+| **数据类型** | **数据类型简写** | **标准命名举例**    |
+| ------------ | ---------------- | ------------------- |
+| Connection   | con              | conNorthwind        |
+| Command      | cmd              | cmdReturnProducts   |
+| Parameter    | parm             | parmProductID       |
+| DataAdapter  | dad              | dadProducts         |
+| DataReader   | dtr              | dtrProducts         |
+| DataSet      | dst              | dstNorthWind        |
+| DataTable    | dtbl             | dtblProduct         |
+| DataRow      | drow             | drowRow98           |
+| DataColumn   | dcol             | dcolProductID       |
+| DataRelation | drel             | drelMasterDetail    |
+| DataView     | dvw              | dvwFilteredProducts |
+
+
+
+### WinForm Control ： WinForm控件
+
+ 
+
+| **数据类型**      | **数据类型简写** | **标准命名举例** |
+| :---------------- | ---------------- | ---------------- |
+| Label             | lbl              | lblMessage       |
+| LinkLabel         | llbl             | llblToday        |
+| Button            | btn              | btnSave          |
+| TextBox           | txt              | txtName          |
+| MainMenu          | mmnu             | mmnuFile         |
+| CheckBox          | chk              | chkStock         |
+| RadioButton       | rbtn             | rbtnSelected     |
+| GroupBox          | gbx              | gbxMain          |
+| PictureBox        | pic              | picImage         |
+| Panel             | pnl              | pnlBody          |
+| DataGrid          | dgrd             | dgrdView         |
+| ListBox           | lst              | lstProducts      |
+| CheckedListBox    | clst             | clstChecked      |
+| ComboBox          | cbo              | cboMenu          |
+| ListView          | lvw              | lvwBrowser       |
+| TreeView          | tvw              | tvwType          |
+| TabControl        | tctl             | tctlSelected     |
+| DateTimePicker    | dtp              | dtpStartDate     |
+| HscrollBar        | hsb              | hsbImage         |
+| VscrollBar        | vsb              | vsbImage         |
+| Timer             | tmr              | tmrCount         |
+| ImageList         | ilst             | ilstImage        |
+| ToolBar           | tlb              | tlbManage        |
+| StatusBar         | stb              | stbFootPrint     |
+| OpenFileDialog    | odlg             | odlgFile         |
+| SaveFileDialog    | sdlg             | sdlgSave         |
+| FoldBrowserDialog | fbdlg            | fgdlgBrowser     |
+| FontDialog        | fdlg             | fdlgFoot         |
+| ColorDialog       | cdlg             | cdlgColor        |
+| PrintDialog       | pdlg             | pdlgPrint        |
+
+ 
+
+### WebControl 命名规范
+
+| 类 型                  | 前 缀 | 示 例               |
+| ---------------------- | ----- | ------------------- |
+| Adrotator              | adrt  | adrtTopAd           |
+| BulletedList           | blst  | blstCity            |
+| Button                 | btn   | btnSubmit           |
+| Calendar               | cal   | calMettingDates     |
+| CheckBox               | chk   | chkBlue             |
+| CheckBoxList           | chkl  | chklFavColors       |
+| CompareValidator       | valc  | valcValidAge        |
+| CustomValidator        | valx  | valxDBCheck         |
+| DropDownList           | drop  | dropCountries       |
+| DataGrid               | dgrd  | dgrdTitles          |
+| DataList               | dlst  | dlstTitles          |
+| RangeValidator         | valg  | valgAge             |
+| FileUpLoad             | fup   | fupImage            |
+| HiddenField            | hfld  | hfldName            |
+| HyperLink              | hlk   | hlkDetails          |
+| Image                  | img   | imgAuntBetty        |
+| ImageButton            | ibtn  | ibtnSubmit          |
+| ImageMap               | imap  | imapSite            |
+| Label                  | lbl   | lblResults          |
+| LinkButton             | lbtn  | lbtnSubmit          |
+| ListBox                | lst   | lstCountries        |
+| Literal                | ltl   | ltlTitle            |
+| Localize               | loc   | locChina            |
+| MultiView              | mvw   | mvwForm1            |
+| Panel                  | pnl   | pnlForm2            |
+| PlaceHolder            | plh   | plhFormContents     |
+| RadioButton            | rad   | radFemale           |
+| RadioButtonList        | radl  | radlGender          |
+| RegularExpression      | vale  | valeEmail_Validator |
+| Repeater               | rpt   | rptQueryResults     |
+| RequiredFieldValidator | valr  | valrFirstName       |
+| SubStitution           | subs  | subsTime            |
+| TextBox                | txt   | txtFirstName        |
+| Table                  | tbl   | tblCountryCodes     |
+| TableCell              | tblc  | tblcGermany         |
+| TableRow               | tblr  | tblrCountry         |
+| ValidationSummary      | vals  | valsFormErrors      |
+| View                   | vw    | vwCity              |
+| Wizard                 | wiz   | wizRegister         |
+| Xml                    | xml   | xmlBooks            |
+
+## TextBox编辑框控件
+
+### 属性说明
+
+#### TextWrapping 应该如何自动换行
+
+=NoWrap //不会换行显示
+
+=Wrap //会换行显示
+
+=WrapWithOverflow //是按空格换行
+
+![image-20210726153332728](CShape基础.assets/image-20210726153332728.png)
+
+
 
