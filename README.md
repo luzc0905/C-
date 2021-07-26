@@ -1,3 +1,11 @@
+笔记中的教程地址
+
+网址：
+
+[https://www.bilibili.com/medialist/detail/ml222902705?type=1]: https://www.bilibili.com/medialist/detail/ml222902705?type=1	"2020年最新C#/.Net Core零基础到精通实战教程全集(C#/Sql/SqlServer/Winform/源码/NetCore/Net Core/全栈)"
+
+
+
 # CShape基础
 
 ## 一、C#语言及其特点
