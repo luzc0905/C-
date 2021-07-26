@@ -12,7 +12,6 @@
 ## 二、认识.NET Framework和.NET Core
 
 ### .NET是什么
-<img src="CShape基础.assets/clip_image009.jpg" referrerpolicy="no-referrer">
 <img src = "CShape基础.assets/clip_image004.jpg" align="center">
 
 ### .NET和C#的关系,这是初学者最常见的问题
